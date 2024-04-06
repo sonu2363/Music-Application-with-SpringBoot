@@ -1,0 +1,32 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>View Songs</title>
+<link href="admin.css" rel="stylesheet">
+</head>
+<body>
+<table border>
+    <thead>
+        <tr>
+            <th>Name</th>
+            
+            <th>Genre</th>
+            <th>Link</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Dynamic content with Thymeleaf -->
+        <tr th:each="song : ${songs}">
+            <td th:text="${song.name}"></td>
+            
+            <td th:text="${song.genre}"></td>
+            <td th:utext="${song.link}"></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
